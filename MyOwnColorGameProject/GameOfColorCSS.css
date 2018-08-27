@@ -1,0 +1,102 @@
+
+
+
+
+body{
+   background:#000000;
+   margin:0;
+}
+
+#container
+{
+   margin:0 auto;
+   max-width:50%;
+}
+
+.square
+{
+   width:30%;
+   background:white;
+   padding-bottom:30%;
+   float:left;
+   margin:1.66%;
+   border-radius: 15%;
+   transition: background 0.5s;
+
+}
+
+.hardsquare
+{
+   width:25%;
+   background:white;
+   padding-bottom:25%;
+   float:left;
+   margin:2.5% 4%;
+   border-radius: 15%;
+   transition: background 0.5s;
+
+
+}
+
+h1
+{
+ 
+   font-size:3em;
+   margin:0;
+   
+}
+#header
+{
+   text-align: center;
+   background:#163969;
+   line-height:1.1;
+   color:#F0F0F0;
+}
+
+
+#gameMessage{
+
+   text-align: center;
+   display:inline-block;
+   width:30%;
+   color:white;
+   font-size:1.3em;
+}
+
+.selected
+{
+   background-color:#160a80;
+   color:white;
+   transition:all 1.5s;
+   border:none;
+   outline:none;
+}
+
+
+
+
+button:hover
+{
+
+
+   border:none;
+   outline:none;
+   background:#160a80;
+   color:white;
+   transition:all 0.5s;
+
+}
+
+button
+{
+   margin:0 0.2%;
+}
+
+#stripe
+{
+ 
+     width: 80%;
+     margin:0 auto;
+
+
+}
