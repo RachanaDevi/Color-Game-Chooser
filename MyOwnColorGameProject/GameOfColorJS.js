@@ -8,13 +8,20 @@ var squares=document.querySelectorAll(".square");
 var newGameButton = document.querySelector("button[name = \"newGame\"]");
 // var modeButtons = document.querySelectorAll(".modeButtons");
 
-
 function init(){
 	reset();
 	winnerDecider();
 	setUpButtonModes();
 }
 
+function refreshTime(){
+	const timeDisplay = document.getElementById("time");
+	const dateString = new Date().toLocaleString();
+	const formattedString = dateString.replace(", ", " - ")
+	timeDisplay.textContent = formattedString;
+}
+
+setInterval(refreshTime, 1000);
 
 
    function setUpButtonModes(){
@@ -22,11 +29,11 @@ function init(){
 		$(".hardsquare").addClass("square").removeClass("hardsquare");
 		$(".modeButton").removeClass("selected");
 		$(this).addClass("selected");
-		if($(this).text() === "EASY")noOfSquares = 3 
+		if($(this).text() === "EASY")noOfSquares = 3
 
 		else if($(this).text() === "MEDIUM")noOfSquares = 6;
 
-	    else{ noOfSquares = 9; 
+	    else{ noOfSquares = 9;
 
               $(".square").addClass("hardsquare").removeClass("square");
 
@@ -43,14 +50,14 @@ function reset(){
    $("#gameMessage").text("");
    $("#header").css("background","#163969");
    colors = setColors(noOfSquares);
-   winningColor =  colors[selectWinningIndex()]; 
+   winningColor =  colors[selectWinningIndex()];
    $("#message").text(winningColor);
 
    for( var i =0 ;i<squares.length;i++)
    {
    	if(colors[i])
    	{
-   		squares[i].style.background=colors[i]; 	
+   		squares[i].style.background=colors[i];
    		squares[i].style.display="block";
    }
    else
@@ -60,8 +67,8 @@ function reset(){
    }
 
    	}
- 	
-   
+
+
 }
 
 
@@ -86,7 +93,7 @@ for ( var i=0;i<squares.length;i++){
 		{
 			this.style.background="#000000";
 			$("#gameMessage").text("TRY AGAIN");
-			
+
 	    }
 
 		});
